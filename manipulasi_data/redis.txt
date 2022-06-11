@@ -1,0 +1,51 @@
+** OPERASI DATA STRING **
+untuk insert data pada redis
+    SET "<key>" "<value>"
+    ex : SET "nama" "sahril mahendra" return OK jika sukses
+
+untuk insert data baru pada redis harus menggunakan key yang berbeda agar tidak menimpa (replace) data yang lama
+    SET "<key>" "<value>"
+    ex : SET "alamat" "Jawa Timur" return OK jika sukses
+
+untuk update data pada redis, menggunakan SET dengan key yang sama (replace)
+    SET "<key yang sama>" "<value baru>"
+    ex : SET "nama" "Moch. Syahryil Mahendra" return OK jika sukses
+
+untuk read data pada redis menggunakan GET
+    GET "<key>"
+    ex : GET "nama" return data jika data yang dicari ketemu
+*note : jika GET "key" dan key nya tidak ada return (nil)
+
+untuk mengetahui data key apakah ada atau tidak menggunakan EXISTS
+    EXISTS "<key>"
+    ex : GET "nama" return (integer) 1 jika ada, (integer) 0 jika tidak ada
+
+untuk menghapus data pada redis menggunakan DEL
+    DEL "<key>" atau jika menghapus banyak sekaligus DEL "<key1>" "<key2>" "<key3>" ...
+    ex : DEL "nama" return (integer) 1 jika ada, (integer) 0 jika tidak ada
+         DEL "nama" "alamat" return (integer) 2
+    note : return (integer) 2 pada DEL artinya data yang berhasil dihapus sejumlah 2 data
+
+untuk menambahkan data dibelakang pada redis menggunakan APPEND
+    APPEND "<key>" jika key nya belum ada maka fungsi APPEND akan seperti SET
+    ex : APPEND "nama" "Mahendra San" return (integer) 12, return sejumlah karakter yang ditambahkan
+
+untuk mencari key pada redis menggunakan KEYS
+    KEYS pattern --> pattern ini menggunakan format regex (regular expression)
+    ex : KEYS * --> untuk menampilkan semua key
+
+
+** OPERASI DATA RANGE STRING **
+SETRANGE KEY <offset> "<value>"
+untuk insert atau update dalam range dimulai dari offset tertentu
+
+GETRANGE KEY <start> <end>
+untuk membaca data dalam range start dan end, jika datanya tidak ada return "" string kosong
+
+
+** OPERASI DATA MULTIPLE STRING **
+MGET KEY "<key1>" "<key2>" "<key3>" ...
+untuk membaca data pada beberapa key
+
+MSET KEY "<key1>" "<key2>" "<key3>" ...
+untuk insert atau update data

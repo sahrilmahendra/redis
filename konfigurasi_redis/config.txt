@@ -23,3 +23,9 @@ untuk melihat log redis di docker container
 
 untuk mematikan container redis di docker
     docker-compose -f docker-compose.yaml down
+
+untuk memilih database
+    select <index>
+    ex : select 1
+
+*note : default database di redis adalah database 0
