@@ -1,0 +1,7 @@
+FLUSHDB
+untuk menghapus semua data di basis data yang aktif (current database)
+    ex : FLUSHDB
+
+FLUSHALL
+untuk menghapus semua data di semua database
+    ex : FLUSHALL
