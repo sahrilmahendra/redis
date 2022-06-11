@@ -1,0 +1,14 @@
+TTL
+(time to live) untuk mengetahui sisa waktu expire key
+    TTL "<key>"
+    ex : TTL "nama" return -1 jika tidak pernah expired, -2 jika key tidak ada atau sudah expired
+
+EXPIRE
+untuk mengatur waktu expire key
+    EXPIRE "<key>" seconds
+    ex : EXPIRE "nama" 10 return 1 jika sukses, 0 jika key tidak ada
+
+SETEX
+untuk insert data sekaligus mengatur waktu expire key
+    SETEX "<key>" seconds "<value>"
+    ex : SETEX "pekerjaan" 20 "programmer" return OK jika sukses
