@@ -1,0 +1,11 @@
+koneksi ke redis server via redis-cli
+    redis-cli -h <host> -p <port>
+    ex : redis-cli -h localhost
+
+jika menggunakan redis di dalam docker container, masuk ke redis nya terlebih dahulu
+    docker container exec -it <redis-image> /bin/sh
+    ex : docker container exec -it redis /bin/sh
+lalu koneksi ke redis
+    redis-cli -h localhost
+untuk mengecek sudah terhubung apa belum
+    ping --> return pong jika sudah terhubung
