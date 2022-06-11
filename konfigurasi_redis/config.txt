@@ -1,3 +1,9 @@
+untuk belajar redis, clone repo dari pzn
+https://github.com/sahrilmahendra/belajar-redis
+
+menjalankan docker-compose 
+    docker-compose -f docker-compose.yaml up -d
+
 koneksi ke redis server via redis-cli
     redis-cli -h <host> -p <port>
     ex : redis-cli -h localhost
@@ -9,3 +15,11 @@ lalu koneksi ke redis
     redis-cli -h localhost
 untuk mengecek sudah terhubung apa belum
     ping --> return pong jika sudah terhubung
+
+
+
+untuk melihat log redis di docker container
+    docker container logs redis
+
+untuk mematikan container redis di docker
+    docker-compose -f docker-compose.yaml down
