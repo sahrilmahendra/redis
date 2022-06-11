@@ -1,0 +1,24 @@
+INCR
+untuk menaikkan 1 angka, value = value + 1
+    INCR "<key>"
+    ex : INCR umur
+
+DECR
+untuk menurunkan 1 angka, value = value - 1
+    DECR "<key>"
+    ex : DECR "sisa waktu"
+
+INCRBY
+untuk menaikkan angka sesuai dengan yang kita atur, value = value + angka
+    INCRBY "<key>" angka_increment
+
+DECRBY
+untuk menurunkan angka sesuai dengan yang kita atur, value = value - angka
+    DECR "<key>" angka_decrement
+
+
+*note :
+- increment & decrement tidak harus ada data awal
+- jika incr dan belum ada datanya maka return "1"
+- jika decr dan belum ada datanya maka return "-1"
+- hal diatas juga berlaku untuk INCRBY dan DECRBY
