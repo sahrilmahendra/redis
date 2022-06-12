@@ -1,0 +1,9 @@
+INFO
+untuk menampilkan informasi statistik server redis
+
+CONFIG <subcommand>
+untuk menampilkan informasi konfigurasi yang diterapkan pada redis
+    ex : CONFIG GET *
+
+SLOWLOG <subcommand>
+untuk menampilkan informasi query yang berat atau lambat untuk dieksekusi
