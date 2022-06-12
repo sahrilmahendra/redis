@@ -1,0 +1,8 @@
+CLIENT LIST
+untuk menampilkan daftar semua client
+
+CLIENT ID
+untuk menampilkan id kita
+
+CLIENT KILL ip:port
+untuk memutuskan koneksi client
