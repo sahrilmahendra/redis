@@ -1,0 +1,9 @@
+MULTI
+untuk mengawali proses transaction
+
+EXEC
+untuk mengeksekusi perintah setelah perintah MULTI
+- note : jika ada 1 atau lebih perintah error setelah perintah MULTI, saat menjalankan EXEC return EXECABORT (dibatalkan)
+
+DISCARD
+untuk membatalkan perintah setelah perintah MULTI
