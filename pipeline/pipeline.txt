@@ -1,3 +1,5 @@
 pipeline digunakan untuk mengirimkan data dalam jumlah banyak (bulk)
+    masuk ke direktori example
+    cd /usr/local/etc/command
     cat "<filename>" | redis-cli -h "<host>" --pipe
     ex : cat sets.txt | redis-cli -h localhost --pipe
