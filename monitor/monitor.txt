@@ -1,0 +1,2 @@
+MONITOR
+untuk memantau logs semua request yang dikirimkan ke redis server
